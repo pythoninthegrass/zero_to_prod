@@ -1,4 +1,7 @@
 # [Moonswitch - Zero to Prod](https://play.instruqt.com/moonswitch/invite/wymkew67tkza)
+
+Two-day workshop on Terraform, Kubernetes, and GitOps run by [Jeff French](https://github.com/moonswitch).
+
 ## Quickstart
 * Setup git repo
     ```bash
@@ -19,6 +22,11 @@
     git status
     git commit -m "init"
     git push --set-upstream origin main
+
+    # config
+    git config pull.rebase true
+    git config --global user.email "4097471+pythoninthegrass@users.noreply.github.com"
+    git config --global user.name "pythoninthegrass"
     ```
 * Terraform aliases
   * Add to ~/.bashrc
@@ -47,6 +55,18 @@
     tf validate     # tfv
     tf plan         # tfp
     tf apply        # tfa
+    ```
+* QOL packages
+    ```bash
+    # apt packages
+    apt update && apt install -y jq tree screen tmux
+
+    # k9s
+    curl -sS https://webinstall.dev/k9s | bash
+
+    # append bin to PATH
+    cat << 'EOF' >> ~/.bashrc
+    export PATH="$HOME/.local/bin:$PATH"
     ```
 
 ## TODO

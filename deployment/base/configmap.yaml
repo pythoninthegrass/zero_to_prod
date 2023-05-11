@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-config
+data:
+  # uiColor: "#6AAACD"
+  uiColor: "#96645E"
