@@ -23,18 +23,35 @@
 * Terraform aliases
   * Add to ~/.bashrc
     ```bash
+    # append to ~/.bash_aliases
+    cat << 'EOF' >> ~/.bash_aliases
+    alias k=kubectl
     alias tf="terraform"
     alias tfi="terraform init"
     alias tff="terraform fmt"
     alias tfv="terraform validate"
     alias tfp="terraform plan"
     alias tfa="terraform apply"
+    EOF
+
+    # sed remove 'alias kc=kubectl' (if found)
+    sed -i '/alias kc=kubectl/d' ~/.bash_aliases
+
+    # source new aliases
+    source ~/.bashrc
     ```
 * Terraform workflow
     ```bash
-    tf init
+    tf init         # tfi
     tf fmt
-    tf validate
-    tf plan
-    tf apply
+    tf validate     # tfv
+    tf plan         # tfp
+    tf apply        # tfa
     ```
+
+## TODO
+* [Issues](https://github.com/pythoninthegrass/zero_to_prod/issues)
+* `Makefile`
+
+## Further Reading
+[moonswitch/workshop-code](https://github.com/moonswitch/workshop-code/tree/main)
